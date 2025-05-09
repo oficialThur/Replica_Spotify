@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Player = () => {
   return (
     <div className='player'>
-        <div className='player_cotrollers'>
+        <div className='player_controllers'>
             <Link >
                 <FontAwesomeIcon className="player_icon" 
                 icon={faBackwardStep} />    

@@ -1,19 +1,29 @@
-import React from 'react'
-import SongItems from './SongItems'
+import React from "react";
+import SongItems from "./SongItems";
+import { useState } from "react";
 
-const SongList = ({songsArray}) => {
-    
-    const items = 5
+const SongList = ({ songsArray }) => {
 
-    return (
-        <div className='song-list'>
-            {songsArray.map((currentSongObj, index) => (
-                <SongItems {...currentSongObj} index={index} key={index}/>
-            ))}
+  const [items, setItems] = useState(5);
 
-            <p className='song-list_see-more'>Ver mais</p>
-        </div>
-  )
-}
+  return (
+    <div className="song-list">
+      {songsArray
+        .filter((currentValue, index) => index < items)
+        .map((currentSongObj, index) => (
+          <SongItems {...currentSongObj} index={index} key={index} />
+        ))}
 
-export default SongList
+      <p
+        className="song-list_see-more"
+        onClick={() => {
+          setItems(items + 5);
+        }}
+      >
+        Ver mais
+      </p>
+    </div>
+  );
+};
+
+export default SongList;
