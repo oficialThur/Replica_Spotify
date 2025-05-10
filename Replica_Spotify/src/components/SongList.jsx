@@ -1,5 +1,5 @@
 import React from "react";
-import SongItems from "./SongItems";
+import SongItem from "./SongItems";
 import { useState } from "react";
 
 const SongList = ({ songsArray }) => {
@@ -11,7 +11,7 @@ const SongList = ({ songsArray }) => {
       {songsArray
         .filter((currentValue, index) => index < items)
         .map((currentSongObj, index) => (
-          <SongItems {...currentSongObj} index={index} key={index} />
+          <SongItem {...currentSongObj} index={index} key={index} />
         ))}
 
       <p

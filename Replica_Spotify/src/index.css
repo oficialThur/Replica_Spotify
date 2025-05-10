@@ -41,7 +41,7 @@ a{
 }
 
 #root{
-  height: 100svh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
 }
@@ -50,7 +50,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 8px 20px;
 }
 
 .header_link{
@@ -348,6 +348,11 @@ a{
 
 .song_image-container {
   box-shadow: 0 0 25px 10px var(--green-1000-25);
+  border-radius: 12px;
+}
+
+.song_image-container img{
+  border-radius: 12px;
 }
 
 .song_bar {

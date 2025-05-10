@@ -17,7 +17,7 @@ const Player = () => {
 
             <Link >
                 <FontAwesomeIcon className="player_icon" 
-                icon={faBackwardStep} />
+                icon={faForwardStep} />
             </Link>
         </div>
 
