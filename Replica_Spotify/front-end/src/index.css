@@ -111,12 +111,12 @@ a{
     gap: 20px;
   }
 
-  .item-list__container {
+  .item-list_container {
     gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .item-list__header {
+  .item-list_header {
     flex-direction: column;
     gap: 10px;
   }
@@ -141,6 +141,11 @@ a{
 .single-item:hover .single-item_icon{
   opacity: 1;
   transform: translateY(0);
+}
+
+.single-item:hover .single-item_2lines {
+  -webkit-line-clamp: 10;
+  line-clamp: 10;
 }
 
 .single-item_div-image-button{
@@ -171,6 +176,14 @@ a{
   transition-property:opacity, transform;
 }
 
+.single-item_icon-artist {
+  position: fixed;
+  opacity: 1;
+  transform: translateY(0);
+  right: 25px;
+  bottom: 25px;
+}
+
 .single-item_2lines{
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -198,7 +211,7 @@ a{
 }
 
 @media (max-width: 480px) {
-  .single-item__icon {
+  .single-item_icon {
     right: 15px;
     bottom: 15px;
   }
@@ -207,7 +220,7 @@ a{
     padding: 0;
   }
 
-  .single-item__texts {
+  .single-item_texts {
     gap: 0;
   }
 }
@@ -249,22 +262,22 @@ a{
 }
 
 @media (max-width: 1280px) {
-  .artist__title {
+  .artist_title {
     font-size: 7.5vw;
     line-height: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .artist__title {
+  .artist_title {
     font-size: 36px;
   }
 
-  .artist__header {
+  .artist_header {
     padding: 16px;
   }
 
-  .artist__body {
+  .artist_body {
     padding: 25px 16px;
     gap: 16px;
   }
@@ -377,21 +390,21 @@ a{
 }
 
 @media (max-width: 800px) {
-  .song__bar {
+  .song_bar {
     grid-template-columns: auto 1fr;
   }
 }
 
 @media (max-width: 1280px) {
-  .song__name {
+  .song_name {
     font-size: 16px;
   }
 
-  .song__bar {
+  .song_bar {
     grid-template-columns: auto 2fr 3fr;
   }
 
-  .song__info {
+  .song_info {
     grid-column: 2;
     grid-row: 1;
     justify-self: start;
@@ -399,13 +412,13 @@ a{
 }
 
 @media (max-width: 480px) {
-  .song__artist-image {
+  .song_artist-image {
     width: 50px;
     height: 50px;
   }
 
-  .song__info,
-  .song__name {
+  .song_info,
+  .song_name {
     font-size: 13px;
   }
 }
@@ -473,7 +486,7 @@ a{
 }
 
 @media (max-width: 1280px) {
-  .player__time {
+  .player_time {
     display: none;
   }
 }
