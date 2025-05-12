@@ -1720,3 +1720,7 @@ export const songsArray = [
     id: 200,
   },
 ];
+
+import { songsArray } from "../../../api/api.js";
+
+export { songsArray };
